@@ -5,7 +5,6 @@ import { Key } from "./Key";
 import './Piano.css'
 import {VALID_KEYS, NOTES, KEY_TO_NOTE} from "../global/constants";
 
-
 class Piano extends React.Component {
     constructor(props) {
         super(props);
@@ -22,19 +21,40 @@ class Piano extends React.Component {
     }
 
     componentDidMount = () => {
+        document.getElementById("piano").addEventListener("mouseover", this.handleMouseOver);
         window.addEventListener('keydown', this.handleKeyDown);
         window.addEventListener('keyup', this.handleKeyUp);
+        window.addEventListener("mousedown", this.handleMouseDown);
+    }
+
+    handleMouseOver = (event) => {
+        const highlightedKey = document.getElementById("piano");
+        highlightedKey.style.color = "red";
+    }
+
+    handleMouseDown = (event) => {
+        if (event.repeat) {
+            return;
+        }
+        const key = event.key;
+        const updatedPressedKey = [this.state.pressedKeys];
+        if (VALID_KEYS.includes(key) && !updatedPressedKey.includes(key)) {
+            updatedPressedKey.push(key);
+        }
+        this.setState({
+            pressedKeys: updatedPressedKey,
+        })
+        this.playNote(KEY_TO_NOTE[key]);
+
     }
 
     handleKeyUp = (event) => {
         const index = this.state.pressedKeys.indexOf(event.key);
-        if (index > -1)
-        {
+        if (index > -1) {
             this.setState(state => ({
                 pressedKeys: state.pressedKeys.splice(index, 0)
             }));
         }
-
     }
 
     handleKeyDown = (event) => {
@@ -68,7 +88,7 @@ class Piano extends React.Component {
                 <audio
                     id = {note}
                     key= {index}
-                    src= {"../notes/"+note+".mp3"}
+                    src= {`../notes/${note}.mp3`}
                 />
             );
         });
@@ -76,9 +96,10 @@ class Piano extends React.Component {
 
         return (
             <div>
-                <div className="piano">
-                    {keys}
-                    {keys}
+                <div
+                    className="piano"
+                    id="piano"
+                >
                     {keys}
                 </div>
                 <div>
