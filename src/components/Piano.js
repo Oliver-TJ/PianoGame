@@ -15,7 +15,6 @@ class Piano extends React.Component {
 
     playNote = (note) => {
         if (!_.isEmpty(note)) {
-            console.log(Audio(document.getElementById(note).src));
             const noteAudio = new Audio(document.getElementById(note).src);
             noteAudio.play();
         }
