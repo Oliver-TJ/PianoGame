@@ -15,6 +15,7 @@ class Piano extends React.Component {
 
     playNote = (note) => {
         if (!_.isEmpty(note)) {
+            console.log(Audio(document.getElementById(note).src));
             const noteAudio = new Audio(document.getElementById(note).src);
             noteAudio.play();
         }
@@ -27,7 +28,7 @@ class Piano extends React.Component {
         window.addEventListener("mousedown", this.handleMouseDown);
     }
 
-    handleMouseOver = (event) => {
+    handleMouseOver = () => {
         const highlightedKey = document.getElementById("piano");
         highlightedKey.style.color = "red";
     }
@@ -45,7 +46,6 @@ class Piano extends React.Component {
             pressedKeys: updatedPressedKey,
         })
         this.playNote(KEY_TO_NOTE[key]);
-
     }
 
     handleKeyUp = (event) => {
