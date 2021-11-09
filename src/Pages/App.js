@@ -1,6 +1,5 @@
 import './App.css';
-import {Piano} from "../components/Piano";
-import {Navbar} from "../components/Menu";
+import { Navbar } from "../components/Menu";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './Home';
 import SignIn from './SignIn';
@@ -13,11 +12,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+          <Router>
           <Navbar />
-          <Switch>
-              <Route path="./Home" exact component={Home} />
-              <Route path="./PianoGame" exact component={PianoGame} />
-          </Switch>
+              <Switch>
+                  <Route path="./Home" exact component={Home} />
+                  <Route path="./PianoGame" exact component={PianoGame} />
+                  <Route path="./SignIn" exact component={SignIn} />
+                  <Route path="./SignUp" exact component={SignUp} />
+              </Switch>
+          </Router>
       </header>
     </div>
   );
