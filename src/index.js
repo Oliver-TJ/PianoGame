@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './Pages/App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
     Nav,
@@ -14,10 +14,10 @@ import {
 } from "./components/NavBarElements";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 
@@ -25,16 +25,13 @@ const Navbar = () => {
     return (
         <>
             <Nav>
-                <NavLogo to="/">
+                <NavLogo to="./Pages/Home">
                     Logo
                 </NavLogo>
                 <Bars />
                 <NavMenu>
                     <NavLink to="./Pages/Home" activeStyle>
                         Home
-                    </NavLink>
-                    <NavLink to="./Pages/App" activeStyle>
-                        Piano
                     </NavLink>
                     <NavLink to="./Pages/SignIn" activeStyle>
                         Sign In

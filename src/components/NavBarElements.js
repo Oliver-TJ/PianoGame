@@ -12,7 +12,9 @@ export const Nav = styled.nav`
                                      (aligned on the grid axis and the main axis) */
   align-items: center; /* Aligns the items towards the centre of the page 
                           (changes when the size of the webpage is changed) */
+  padding: 0.2rem calc((100vw - 1000px) / 2);
   z-index: 12; /* Specifies the stack order */
+  vertical-align: top; /* Sets the bar to the top of the screen */
 `;
 
 
