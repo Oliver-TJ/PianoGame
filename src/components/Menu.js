@@ -8,27 +8,28 @@ import {
     NavBtn,
     NavBtnLink,
 } from "./NavBarElements";
+import './Menu.css';
 
 const Navbar = () => {
     return (
         <>
             <Nav>
-                <NavLogo to="./Pages/Home">
-                    Logo
+                <NavLogo to="./Home">
+                    <img src="./Logo.png" alt={'Logo'}/>
                 </NavLogo>
                 <Bars />
                 <NavMenu>
-                    <NavLink to="./Pages/Home" activeStyle>
+                    <NavLink to="./Home" activeStyle>
                         Home
                     </NavLink>
-                    <NavLink to="./Pages/SignIn" activeStyle>
+                    <NavLink to="./SignIn" activeStyle>
                         Sign In
                     </NavLink>
-                    <NavLink to="./Pages/PianoGame" activeStyle>
+                    <NavLink to="./PianoGame" activeStyle>
                         Piano
                     </NavLink>
                     <NavBtn>
-                        <NavBtnLink to="./Pages/SignUp">Sign Up</NavBtnLink>
+                        <NavBtnLink to="./SignUp">Sign Up</NavBtnLink>
                     </NavBtn>
                 </NavMenu>
             </Nav>

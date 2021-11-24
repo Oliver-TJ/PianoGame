@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { FaBars } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
@@ -7,14 +8,11 @@ import styled from "styled-components";
 export const Nav = styled.nav`
   background: cadetblue; /* nice background colour */
   display: flex; /* Puts the items in a flex-box */
-  height: 80px;
+  height: 85px;
   justify-content: space-between; /* makes the flex box align the items evenly throughout
                                      (aligned on the grid axis and the main axis) */
-  align-items: center; /* Aligns the items towards the centre of the page 
-                          (changes when the size of the webpage is changed) */
   padding: 0.2rem calc((100vw - 1000px) / 2);
   z-index: 12; /* Specifies the stack order */
-  vertical-align: top; /* Sets the bar to the top of the screen */
 `;
 
 
