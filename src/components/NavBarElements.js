@@ -21,6 +21,7 @@ export const NavLogo = styled(Link)`
   color: white;
   font-size: 2rem;
   text-decoration: none;
+  size: 20vmin;
 `;
 
 export const NavLink = styled(Link)`
