@@ -27,7 +27,7 @@ export const InputBox = styled.input`
   color: white;
   background: transparent;
   ::placeholder{
-    color: white;
+    color: grey;
   }
   &:hover {
     ::placeholder{
