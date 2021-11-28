@@ -1,4 +1,4 @@
-import styles from './App.css';
+import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
@@ -13,30 +13,22 @@ import {
     NavMenu,
     NavBtn,
     NavBtnLink,
-} from "./components/NavBarElements";
+} from "./components/GlobalComponents";
 
 
 function App() {
     return (
         <div className="App">
             <header className="App-header">
-            <Router>
-                <Navbar />
-                <Switch>
-                    <Route path="/" exact-component={Home}>
-                        <Home />
-                    </Route>
-                    <Route path="/pages/PianoGame" exact-component={PianoGame}>
-                        <PianoGame />
-                    </Route>
-                    <Route path="/pages/SignIn" exact-component={SignIn}>
-                        <SignIn />
-                    </Route>
-                    <Route path="/pages/SignUp" exact-component={SignUp}>
-                        <SignUp />
-                    </Route>
-                </Switch>
-            </Router>
+                <Router>
+                    <Navbar />
+                    <Switch>
+                        <Route path="/" exact component={Home}/>
+                        <Route path="/PianoGame" component={PianoGame}/>
+                        <Route path="/SignIn" component={SignIn}/>
+                        <Route path="/SignUp" component={SignUp}/>
+                    </Switch>
+                </Router>
             </header>
         </div>
     );
@@ -54,14 +46,14 @@ const  Navbar = () => {
                 <NavLink to="/" activeStyle>
                     Home
                 </NavLink>
-                <NavLink to="/pages/SignIn" activeStyle>
-                    Log In
+                <NavLink to="/SignIn" activeStyle>
+                    Sign In
                 </NavLink>
-                <NavLink to="/pages/PianoGame" activeStyle>
+                <NavLink to="/PianoGame" activeStyle>
                     Piano
                 </NavLink>
                 <NavBtn>
-                    <NavBtnLink to="/pages/SignUp">Sign Up</NavBtnLink>
+                    <NavBtnLink to="/SignUp">Sign Up</NavBtnLink>
                 </NavBtn>
             </NavMenu>
         </Nav>

@@ -4,8 +4,8 @@ import './PianoGame.css';
 
 function PianoGame() {
     return (
-        <div className="PianoGame">
-            <header className="Piano-header">
+        <div>
+            <header className="Piano">
                 <Piano />
             </header>
         </div>

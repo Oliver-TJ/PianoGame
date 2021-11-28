@@ -5,7 +5,7 @@ import _ from 'lodash';
 
 class Key extends React.Component {
     noteIsFlat = (note) => {
-        return note.length > 1;
+        return note.length > 2;
     }
 
     keyIsPressed = (note, pressedKeys) => {

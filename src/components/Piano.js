@@ -1,6 +1,5 @@
 import React from "react";
 import _ from 'lodash'; // format = _.map( collection, iteratee )
-
 import { Key } from "./Key";
 import './Piano.css'
 import {VALID_KEYS, NOTES, KEY_TO_NOTE} from "../global/constants";
@@ -14,37 +13,29 @@ class Piano extends React.Component {
     }
 
     playNote = (note) => {
-        if (!_.isEmpty(note)) {
+        try {
+            if (!_.isEmpty(note)) {
+                const noteAudio = new Audio(document.getElementById(note).src);
+                console.log(noteAudio);
+                noteAudio.play();
+            }
+        }
+        catch (err) {
+            console.log(note);
+        }
+
+    }
+
+    pauseNote = (note) => {
+        if(_.isEmpty(note)) {
             const noteAudio = new Audio(document.getElementById(note).src);
-            noteAudio.play();
+            noteAudio.pause();
         }
     }
 
     componentDidMount = () => {
-        document.getElementById("piano").addEventListener("mouseover", this.handleMouseOver);
         window.addEventListener('keydown', this.handleKeyDown);
         window.addEventListener('keyup', this.handleKeyUp);
-        window.addEventListener("mousedown", this.handleMouseDown);
-    }
-
-    handleMouseOver = () => {
-        const highlightedKey = document.getElementById("piano");
-        highlightedKey.style.color = "red";
-    }
-
-    handleMouseDown = (event) => {
-        if (event.repeat) {
-            return;
-        }
-        const key = event.key;
-        const updatedPressedKey = [this.state.pressedKeys];
-        if (VALID_KEYS.includes(key) && !updatedPressedKey.includes(key)) {
-            updatedPressedKey.push(key);
-        }
-        this.setState({
-            pressedKeys: updatedPressedKey,
-        })
-        this.playNote(KEY_TO_NOTE[key]);
     }
 
     handleKeyUp = (event) => {
@@ -54,6 +45,7 @@ class Piano extends React.Component {
                 pressedKeys: state.pressedKeys.splice(index, 0)
             }));
         }
+        this.pauseNote(event.key);
     }
 
     handleKeyDown = (event) => {
