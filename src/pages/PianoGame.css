@@ -1,5 +1,5 @@
 .Piano {
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-top: 40%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
 }
