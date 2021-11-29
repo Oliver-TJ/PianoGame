@@ -17,12 +17,31 @@ export const Button = styled.button`
   }
 `;
 
+export const InputButton = styled.input`
+  cursor: pointer;
+  border: 2px solid #61dafb;
+  border-radius: 3px;
+  background: transparent;
+  color: white;
+  padding: 10px 20px;
+  width: calc((117vw - 1000px) / 2);
+  ::placeholder {
+    font-family: Roboto;
+  }
+  &:hover {
+    background: #61dafb;
+    color: black;
+    transition: all 0.2s ease-in-out;
+  }
+`;
+
 export const InputBox = styled.input`
   margin: 0.5em;
   border: 2px solid #61dafb;
   border-radius: 3px;
-  padding: 0.5em;
+  width: calc((110vw - 1000px) / 2);
   color: white;
+  padding: 10px 20px;
   background: transparent;
   ::placeholder{
     color: grey;
