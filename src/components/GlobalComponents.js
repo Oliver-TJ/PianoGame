@@ -13,25 +13,32 @@ export const Button = styled.button`
   &:hover {
     background: #61dafb;
     color: black;
+    padding: 5px 1em;
     transition: all 0.2s ease-in-out; /* smooth transition */
+    &:active {
+      background: orange;
+      border: 2px solid orange;
+      transition: all 0.1s ease-in-out;
+    }
   }
 `;
 
 export const InputButton = styled.input`
-  cursor: pointer;
   border: 2px solid #61dafb;
-  border-radius: 3px;
   background: transparent;
+  border-radius: 3px;
   color: white;
-  padding: 10px 20px;
-  width: calc((117vw - 1000px) / 2);
-  ::placeholder {
-    font-family: Roboto;
-  }
+  padding: 0.25em 1em;
   &:hover {
     background: #61dafb;
     color: black;
+    padding: 0.5em 1em;
     transition: all 0.2s ease-in-out;
+    &:active {
+      background: orange;
+      border: 2px solid orange;
+      transition: all 0.1s ease-in-out;
+    }
   }
 `;
 
@@ -65,6 +72,24 @@ export const Nav = styled.nav`
   z-index: 12; /* Specifies the stack order */
 `;
 
+export const Option = styled.option`
+  color: black;
+  background: #61dafb;
+`;
+
+export const Dropdown = styled.select`
+  color: white;
+  background: transparent;
+  padding: 0.5em 2.3em;
+  border: 2px solid #61dafb;
+  border-radius: 3px;
+  &:hover {
+    background: #61dafb;
+    color: black;
+    transition: all 0.2s ease-in-out;
+  }
+`;
+
 
 export const NavLogo = styled(Link)`
   cursor: pointer; /* Allows the user to see when they are hovering over the logo box */
@@ -73,9 +98,17 @@ export const NavLogo = styled(Link)`
   text-decoration: none;
   size: 20vmin;
   padding: 0 2rem;
+  border: 1px solid cadetblue;
+  border-radius: 10px;
+  &:hover {
+    border: 1px solid orange;
+    background: orange;
+    transition: all 0.2s ease-in-out;
+  }
 `;
 
 export const NavLink = styled(Link)`
+  border-radius: 10px;
   color: #fff;
   display: flex;
   align-items: center;
@@ -83,25 +116,10 @@ export const NavLink = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-  &:active {
-    color:black;
-  }
   &:hover {
     color: black;
-  }
-`;
-
-export const Bars = styled(FaBars)`
-  display: none;
-  color: #fff;
-  @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 75%);
-    font-size: 1.8rem;
-    cursor: pointer;
+    background: orange;
+    transition: all 0.2s ease-in-out;
   }
 `;
 
@@ -109,20 +127,12 @@ export const NavMenu = styled.nav`
   display: flex;
   align-items: center;
   margin-right: -24px;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 `;
 
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
   margin-right: 24px;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 `;
 
 export const NavBtnLink = styled(Link)`
@@ -140,6 +150,11 @@ export const NavBtnLink = styled(Link)`
     transition: all 0.2s ease-in-out;
     background: #fff;
     color: #808080;
+  }
+  :active {
+    color: black;
+    background: orange;
+    border: 1px solid orange;
   }
 `;
 

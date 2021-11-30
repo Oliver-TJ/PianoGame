@@ -9,7 +9,6 @@ import {
     Nav,
     NavLogo,
     NavLink,
-    Bars,
     NavMenu,
     NavBtn,
     NavBtnLink,
@@ -41,7 +40,6 @@ const  Navbar = () => {
             <NavLogo to="/">
                 <img src={logo} alt={'Logo'} className={"logo"}/>
             </NavLogo>
-            <Bars />
             <NavMenu>
                 <NavLink to="/" activeStyle>
                     Home
