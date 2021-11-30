@@ -1,26 +1,30 @@
 import React from "react";
-import { Button, InputBox, InputButton } from "./GlobalComponents";
+import { InputBox, InputButton } from "./GlobalComponents";
 
 class HandleSignUp extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {value: ''};
+    state = {
+        email: '',
+        username: '',
+        password: ''
+    };
 
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
-
+    handleOnChange = event => {
+        this.setState ({[ event.target.name]: event.target.value })
     }
 
-    handleChange(event) {
-        this.setState({value: event.target.value})
+    handleSubmit() {
+        const subEmail = this.state.email;
+        alert(subEmail)
+        const subUser = this.state.username;
+        const subPass = this.state.password;
+        alert("Starting");
+
+        function checkEmail(email) {
+            const validRegex =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            /* checks whether the values inputted fit the format of an email */
+            return !!email.value.match(validRegex);
+        }
     }
-
-    handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value)
-        event.preventDefault();
-    }
-
-
 
 
     render() {
@@ -32,27 +36,30 @@ class HandleSignUp extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         <InputBox placeholder={"Email"}
-                                  value={this.state.value}
-                                  onChange={this.handleChange}
+                                  name={"email"}
+                                  className={"email"}
+                                  onChange={this.handleOnChange}
                         />
                     </div>
                     <div>
                         <InputBox
+                            className={"username"}
                             placeholder={"Username"}
-                            value={this.state.value}
-                            onChange={this.handleChange}
+                            name={"username"}
+                            onChange={this.handleOnChange}
                         />
                     </div>
                     <div>
                         <InputBox placeholder={"Password"}
                                   type={"password"}
-                                  value={this.state.value}
-                                  onChange={this.handleChange}
+                                  name={"password"}
+                                  className={"password"}
+                                  onChange={this.handleOnChange}
                         />
                     </div>
                     <div>
                         <InputButton
-                            type="submit"
+                            type="Submit"
                             value="Sign Up"
                         />
                     </div>
