@@ -16,12 +16,11 @@ class Piano extends React.Component {
         try {
             if (!_.isEmpty(note)) {
                 const noteAudio = new Audio(document.getElementById(note).src);
-                console.log(noteAudio);
                 noteAudio.play();
             }
         }
         catch (err) {
-            console.log(note);
+            console.log(err)
         }
 
     }

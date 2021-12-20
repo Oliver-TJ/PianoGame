@@ -1,30 +1,9 @@
 import React from "react";
+import { useState } from "react";
 import { InputBox, InputButton } from "./GlobalComponents";
 
 class HandleSignUp extends React.Component {
-    state = {
-        email: '',
-        username: '',
-        password: ''
-    };
 
-    handleOnChange = event => {
-        this.setState ({[ event.target.name]: event.target.value })
-    }
-
-    handleSubmit() {
-        const subEmail = this.state.email;
-        alert(subEmail)
-        const subUser = this.state.username;
-        const subPass = this.state.password;
-        alert("Starting");
-
-        function checkEmail(email) {
-            const validRegex =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-            /* checks whether the values inputted fit the format of an email */
-            return !!email.value.match(validRegex);
-        }
-    }
 
 
     render() {
