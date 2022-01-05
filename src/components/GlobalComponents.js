@@ -1,4 +1,3 @@
-import { FaBars } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -70,6 +69,7 @@ export const Nav = styled.nav`
                                      (aligned on the grid axis and the main axis) */
   padding: 0.2rem calc((100vw - 1000px) / 2);
   z-index: 12; /* Specifies the stack order */
+  border-bottom: 2px black;
 `;
 
 export const Option = styled.option`

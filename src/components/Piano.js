@@ -21,9 +21,8 @@ class Piano extends React.Component {
             }
         }
         catch (err) {
-            console.log(note);
+            console.log(err);
         }
-
     }
 
     pauseNote = (note) => {

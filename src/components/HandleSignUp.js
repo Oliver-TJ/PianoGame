@@ -12,18 +12,27 @@ class HandleSignUp extends React.Component {
         this.setState ({[ event.target.name]: event.target.value })
     }
 
-    handleSubmit() {
+    handleSubmit = () => {
         const subEmail = this.state.email;
-        alert(subEmail)
         const subUser = this.state.username;
         const subPass = this.state.password;
-        alert("Starting");
 
         function checkEmail(email) {
-            const validRegex =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-            /* checks whether the values inputted fit the format of an email */
+            const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
             return !!email.value.match(validRegex);
         }
+
+        function checkUsername(user) {
+            return 4 <= user.length <= 16;
+        }
+
+        function checkPassword(pass) {
+            return 6 <= pass.length <= 16;
+        }
+
+        alert(checkEmail(subEmail));
+        alert(checkUsername(subUser));
+        alert(checkPassword(subPass));
     }
 
 
@@ -31,14 +40,15 @@ class HandleSignUp extends React.Component {
         return(
             <div>
                 <div>
-                    <p> Sign up and get started! </p>
+                    <p> Sign up </p>
                 </div>
                 <form onSubmit={this.handleSubmit}>
                     <div>
-                        <InputBox placeholder={"Email"}
-                                  name={"email"}
-                                  className={"email"}
-                                  onChange={this.handleOnChange}
+                        <InputBox
+                            placeholder={"Email"}
+                            name={"email"}
+                            className={"email"}
+                            onChange={this.handleOnChange}
                         />
                     </div>
                     <div>
@@ -50,11 +60,12 @@ class HandleSignUp extends React.Component {
                         />
                     </div>
                     <div>
-                        <InputBox placeholder={"Password"}
-                                  type={"password"}
-                                  name={"password"}
-                                  className={"password"}
-                                  onChange={this.handleOnChange}
+                        <InputBox
+                            placeholder={"Password"}
+                            type={"password"}
+                            name={"password"}
+                            className={"password"}
+                            onChange={this.handleOnChange}
                         />
                     </div>
                     <div>

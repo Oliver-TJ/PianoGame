@@ -32,8 +32,7 @@ class Key extends React.Component {
         } else {
             key = (
                 <div className={keyClassName}>
-                    <div className="key-text">
-                    </div>
+                    <div className="key-text" />
                 </div>
             );
         }
