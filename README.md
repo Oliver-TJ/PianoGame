@@ -1,4 +1,4 @@
-# Pianisto
+# Online Piano
 
 This is my A Level Computer Science coursework project.
 
