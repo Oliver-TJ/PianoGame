@@ -22,6 +22,25 @@ export const Button = styled.button`
   }
 `;
 
+export const InputBoxName = styled.input`
+  margin: 0.5em;
+  border: 2px solid #61dafb;
+  border-radius: 3px;
+  width: 8em;
+  color: white;
+  padding: 10px 20px;
+  background: transparent;
+  ::placeholder{
+    color: grey;
+  }
+  &:hover {
+    ::placeholder{
+      color: #61dafb;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+`;
+
 export const InputButton = styled.input`
   border: 2px solid #61dafb;
   background: transparent;
@@ -33,10 +52,12 @@ export const InputButton = styled.input`
     color: black;
     padding: 0.5em 1em;
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
     &:active {
       background: orange;
       border: 2px solid orange;
       transition: all 0.1s ease-in-out;
+      cursor: crosshair;
     }
   }
 `;
@@ -45,15 +66,15 @@ export const InputBox = styled.input`
   margin: 0.5em;
   border: 2px solid #61dafb;
   border-radius: 3px;
-  width: calc((110vw - 1000px) / 2);
+  width: 20em;
   color: white;
-  padding: 10px 20px;
+  padding: 0.72em 1.7em;
   background: transparent;
-  ::placeholder{
+  ::placeholder {
     color: grey;
   }
   &:hover {
-    ::placeholder{
+    ::placeholder {
       color: #61dafb;
       transition: all 0.2s ease-in-out;
     }
@@ -70,24 +91,6 @@ export const Nav = styled.nav`
   padding: 0.2rem calc((100vw - 1000px) / 2);
   z-index: 12; /* Specifies the stack order */
   border-bottom: 2px black;
-`;
-
-export const Option = styled.option`
-  color: black;
-  background: #61dafb;
-`;
-
-export const Dropdown = styled.select`
-  color: white;
-  background: transparent;
-  padding: 0.5em 2.3em;
-  border: 2px solid #61dafb;
-  border-radius: 3px;
-  &:hover {
-    background: #61dafb;
-    color: black;
-    transition: all 0.2s ease-in-out;
-  }
 `;
 
 
@@ -132,11 +135,11 @@ export const NavMenu = styled.nav`
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
-  margin-right: 24px;
+  margin-right: 0.2em;
 `;
 
 export const NavBtnLink = styled(Link)`
-  border-radius: 4px;
+  border-radius: 0.2em;
   background: transparent;
   padding: 10px 22px;
   color: #fff;
@@ -145,7 +148,8 @@ export const NavBtnLink = styled(Link)`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  margin-left: 24px;
+  margin-left: 0.2em;
+  font-size: 1em;
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;

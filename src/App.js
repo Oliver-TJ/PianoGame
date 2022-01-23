@@ -44,11 +44,11 @@ const  Navbar = () => {
                 <NavLink to="/" activeStyle>
                     Home
                 </NavLink>
-                <NavLink to="/SignIn" activeStyle>
-                    Sign In
-                </NavLink>
                 <NavLink to="/PianoGame" activeStyle>
                     Piano
+                </NavLink>
+                <NavLink to="/SignIn" activeStyle>
+                    Sign In
                 </NavLink>
                 <NavBtn>
                     <NavBtnLink to="/SignUp">Sign Up</NavBtnLink>

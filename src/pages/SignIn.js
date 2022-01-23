@@ -4,9 +4,9 @@ import { HandleSignIn } from "../components/HandleSignIn";
 function SignIn() {
     return (
         <div>
-            <HandleSignIn/>
+            <HandleSignIn />
         </div>
     )
 }
 
-export default SignIn;
+export default  SignIn;

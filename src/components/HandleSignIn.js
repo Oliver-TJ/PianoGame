@@ -8,9 +8,7 @@ class HandleSignIn extends React.Component {
         this.state = {value: ''};
 
         this.handleChangeUs = this.handleChange.bind(this);
-        this.handleSubmitUs = this.handleSubmit.bind(this);
         this.handleChangePa = this.handleChange.bind(this);
-        this.handleSubmitPa = this.handleSubmit.bind(this);
     }
 
     handleChange(event) {
@@ -47,19 +45,11 @@ class HandleSignIn extends React.Component {
                     />
                 </div>
                 <div>
-                    <InputButton type="submit" value="Submit" />
+                    <InputButton type="submit" value="Sign In" />
                 </div>
             </form>
         );
     }
-}
-
-function password() {
-
-}
-
-function username() {
-
 }
 
 export { HandleSignIn }
