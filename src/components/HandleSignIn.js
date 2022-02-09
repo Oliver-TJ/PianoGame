@@ -1,5 +1,5 @@
 import React from "react";
-import {InputBox, InputButton} from "./GlobalComponents";
+import {InputBox, InputButton, WordLink} from "./GlobalComponents";
 
 class HandleSignIn extends React.Component {
 
@@ -45,6 +45,9 @@ class HandleSignIn extends React.Component {
                     />
                 </div>
                 <div>
+                    <WordLink href={"../SignUp"}>
+                        I need to make an account
+                    </WordLink>
                     <InputButton type="submit" value="Sign In" />
                 </div>
             </form>
