@@ -10,37 +10,15 @@ class HandleSignUp extends React.Component {
 
     handleOnChange = event => {
         this.setState ({[ event.target.name]: event.target.value })
+        /* Sets the name to the value when it is entered */
     }
 
-    handleSubmit = () => {
-        const subEmail = this.state.email;
-        const subPass = this.state.password;
-
-
-        function submitDetails() {
-            var data = {
-                email: subEmail,
-                password: subPass,
-            };
-
-            SignUpDataService.create(data)
-                .then(response => {
-                    this.setState({
-                    })
-                })
+    handleSubmit() {
+        var data = {
+            email: this.state.email,
+            password: this.state.password
         }
-
-        function checkNumber(num) {
-            const actual = parseInt(num);
-            if (actual.length === 0){
-                return true;
-            }
-            if (isNaN(num)) {
-                return false;
-            }
-            return actual.length === 13;
-        }
-
+        console.log(data);
     }
 
 
