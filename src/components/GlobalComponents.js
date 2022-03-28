@@ -81,6 +81,18 @@ export const InputBox = styled.input`
   }
 `;
 
+export const WordLink = styled.a`
+  color: #61dafb;
+  text-underline: aqua;
+  font-size: 17px;
+  padding-right: 3em;
+  &:hover {
+    color: white;
+    text-shadow: darkred;
+    transition: all 0.1s ease-in-out;
+  }
+`;
+
 
 export const Nav = styled.nav`
   background: cadetblue; /* nice background colour */
@@ -161,5 +173,3 @@ export const NavBtnLink = styled(Link)`
     border: 1px solid orange;
   }
 `;
-
-
