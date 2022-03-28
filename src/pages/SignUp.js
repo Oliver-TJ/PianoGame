@@ -1,8 +1,8 @@
 import React from 'react';
-import {HandleSignUp} from "../components/HandleSignUp";
+    import {HandleSignUp} from "../components/HandleSignUp";
 
-function SignUp() {
-    return (
+    function SignUp() {
+        return (
         <div>
             <HandleSignUp />
         </div>

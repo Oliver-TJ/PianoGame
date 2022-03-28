@@ -36,7 +36,7 @@ class Key extends React.Component {
             if (noteIsFlat) {
                 key = (
                     <div className={keyClassName}>
-                        <div className="key.flat.text">{keyNote.toUpperCase()}</div>
+                        <div className="key.flat.text"/>
                     </div>
                 );
             }
