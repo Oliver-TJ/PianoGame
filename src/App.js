@@ -20,7 +20,9 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <Router>
-                    <Navbar />
+                    <Navbar
+                        classname="nav-bar"
+                    />
                     <Switch>
                         <Route path="/" exact component={Home}/>
                         <Route path="/PianoGame" component={PianoGame}/>

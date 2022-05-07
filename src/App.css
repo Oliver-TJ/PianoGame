@@ -1,4 +1,5 @@
 .App {
+  z-index: 4;
   text-align: center;
 }
 
@@ -8,15 +9,8 @@
   border: 2px black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-bar {
+  z-index: 4;
 }
 
 .App-header {

@@ -2,7 +2,8 @@ import React from "react";
 import _ from 'lodash'; // format = _.map( collection, iteratee )
 import { Key } from "./Key";
 import './Piano.css'
-import { VALID_KEYS, NOTES, KEY_TO_NOTE } from "../global/constants";
+import { VALID_KEYS, NOTES, KEY_TO_NOTE } from "./constants";
+import { Animate } from 'react-move';
 
 class Piano extends React.Component {
     constructor(props) {
@@ -85,7 +86,7 @@ class Piano extends React.Component {
 
 
         return (
-            <div>
+            <div className="piano-box">
                 <div
                     className="piano"
                     id="piano"

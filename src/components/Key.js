@@ -1,16 +1,9 @@
 import React from "react";
 import './Key.css';
-import { NOTE_TO_KEY } from "../global/constants";
+import { NOTE_TO_KEY } from "./constants";
 import _ from 'lodash';
 
 class Key extends React.Component {
-    noteIsFlat = (note) => {
-        return note.length > 2;
-    }
-
-    keyIsPressed = (note, pressedKeys) => {
-        return _.includes(pressedKeys, NOTE_TO_KEY[note])
-    }
 
     render() {
         let keyClassName = "key";
@@ -23,34 +16,27 @@ class Key extends React.Component {
         if (keyIsPressed) {
             keyClassName += " pressed";
         }
+        return (
+            <div >
+                <div>
+                    <div className="border-lines" />
+                </div>
+                <div>
+                    <div className={keyClassName} />
+                </div>
+            </div>
+            )
 
-        let keyNote = NOTE_TO_KEY[this.props.note];
-        console.log(NOTE_TO_KEY[this.props.note]);
-
-        let key;
-        if (keyNote === undefined) {
-            key = (
-                <div className={keyClassName}/>
-            );
-        } else {
-            if (noteIsFlat) {
-                key = (
-                    <div className={keyClassName}>
-                        <div className="key.flat.text"/>
-                    </div>
-                );
-            }
-            else {
-                key = (
-                    <div className={keyClassName}>
-                        <div className="key-text">{keyNote.toUpperCase()}</div>
-                    </div>
-                );
-            }
-
-        }
-        return key;
     }
+
+    noteIsFlat = (note) => {
+        return note.length > 2;
+    }
+
+    keyIsPressed = (note, pressedKeys) => {
+        return _.includes(pressedKeys, NOTE_TO_KEY[note])
+    }
+
 }
 
 export { Key };
