@@ -2,11 +2,9 @@ import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const HomeButton = styled.a`
-  border: 2px solid #61dafb;
   background: transparent;
   border-radius: 3px;
   color: white;
-  margin-top: 20px;
   &:hover {
     background: #61dafb;
     color: black;
@@ -103,9 +101,9 @@ export const NavLogo = styled(Link)`
   font-size: 2rem;
   text-decoration: none;
   size: 20px;
-  padding: 0 2rem;
+  padding: 0 2rem; /* sets the distance of the other items from it to 2rem in the y-axis */
   border: 1px solid cadetblue;
-  border-radius: 10px;
+  border-radius: 10px; /* curves the edges of the border */
   &:hover {
     border: 1px solid orange;
     background: orange;

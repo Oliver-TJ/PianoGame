@@ -1,20 +1,30 @@
 // Array containing the range of notes available
-const NOTES =  ['C3', 'Db3', 'D3', 'Eb3',
+export const NOTES =  ['C3', 'Db3', 'D3', 'Eb3',
                 'E3', 'F3', 'Gb3', 'G3',
                 'Ab3', 'A3', 'Bb3', 'B3', 'C4'];
 
 // array containing all of the valid keys you can press on the keyboard
-const VALID_KEYS = ['a', 'w', 's', 'e',
+ export const VALID_KEYS = ['a', 'w', 's', 'e',
                     'd', 'f', 't', 'g',
                     'y', 'h', 'u', 'j', 'k'];
 
-const ODE_TO_JOY = [['E3', '1'], ['E3', '1'], ['F3', '1'], ['G3', '1'],
-                    ['G3', '1'], ['F3', '1'], ['E3', '1'], ['D3', '1'],
-                    ['C3', '1'], ['C3', '1'], ['D3', '1'], ['E3', '1'],
-                    ['E3', '1'], ['D3', '1'], ['D3', '2'], ]
+export const ODE_TO_JOY = ['C3',  'D3',
+                           'E3', 'F3',  'G3',
+                           'A3',  'B3', 'C4']
+
+export const NOTE_TO_XVAL = {
+    C3   : '423px',
+    D3   : '478px',
+    E3   : '533px',
+    F3   : '588px',
+    G3   : '643px',
+    A3   : '698px',
+    B3   : '753px',
+    C4   : '808px'
+}
 
 // Dictionary to map the keys to notes
-const KEY_TO_NOTE = {
+export const KEY_TO_NOTE = {
     a: 'C3',
     w: 'Db3',
     s: 'D3',
@@ -31,7 +41,7 @@ const KEY_TO_NOTE = {
 };
 
 // Dictionary to map the notes to the key
-const NOTE_TO_KEY = {
+export const NOTE_TO_KEY = {
     C3   : 'a',
     Db3  : 'w',
     D3   : 's',
@@ -47,7 +57,3 @@ const NOTE_TO_KEY = {
     C4   : 'k'
 };
 
-
-
-
-export { NOTE_TO_KEY, KEY_TO_NOTE, VALID_KEYS, NOTES, ODE_TO_JOY};

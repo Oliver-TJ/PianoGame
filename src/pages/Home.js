@@ -1,4 +1,5 @@
 import React from "react";
+import "./Home.css";
 import {HomeButton} from "../components/GlobalComponents";
 
 function Home() {
@@ -11,20 +12,22 @@ function Home() {
             <p2>
                 Please click on one of the options below to begin:
             </p2>
-            <div>
-                <HomeButton href="./SignIn" className="home-button">
-                    Sign In
-                </HomeButton>
-            </div>
-            <div>
-                <HomeButton href="./SignUp" className="home-button">
-                    Sign Up
-                </HomeButton>
-            </div>
-            <div>
-                <HomeButton href="./PianoGame" className="home-button">
-                    Play
-                </HomeButton>
+            <div className="home-box">
+                <div>
+                    <HomeButton href="./SignIn" className="home-button">
+                        Sign In
+                    </HomeButton>
+                </div>
+                <div>
+                    <HomeButton href="./SignUp" className="home-button">
+                        Sign Up
+                    </HomeButton>
+                </div>
+                <div>
+                    <HomeButton href="./PianoGame" className="home-button">
+                        Play
+                    </HomeButton>
+                </div>
             </div>
         </div>
     )

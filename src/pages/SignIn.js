@@ -4,7 +4,7 @@ import {InputBox, InputButton, WordLink} from "../components/GlobalComponents";
 function SignIn() {
     return (
         <div>
-            <HandleSignIn />
+            <HandleSignIn/>
         </div>
     )
 }

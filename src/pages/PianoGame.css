@@ -6,6 +6,11 @@
     z-index: 1;
 }
 
+.test {
+    width: auto;
+    background-color: black;
+}
+
 .menu-box {
     z-index: 3;
     position: fixed;
@@ -31,12 +36,21 @@
 
 .btn-close {
     position: fixed;
-    margin-left: 120px;
-    margin-top: 90px;
+    margin-left: -73px;
+    margin-top: 200px;
 }
 
 .time-counter {
     position: fixed;
     margin-left: 120px;
     margin-top: -500px;
+}
+
+.note {
+    position: fixed;
+    z-index: 3;
+    background-color: orange;
+    height: 60px;
+    width: 50px;
+    border: 2px solid black;
 }

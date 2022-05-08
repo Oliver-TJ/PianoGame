@@ -3,7 +3,6 @@ import _ from 'lodash'; // format = _.map( collection, iteratee )
 import { Key } from "./Key";
 import './Piano.css'
 import { VALID_KEYS, NOTES, KEY_TO_NOTE } from "./constants";
-import { Animate } from 'react-move';
 
 class Piano extends React.Component {
     constructor(props) {
@@ -17,13 +16,10 @@ class Piano extends React.Component {
         try {
             if (!_.isEmpty(note)) {
                 const noteAudio = new Audio(document.getElementById(note).src);
-                console.log(noteAudio);
                 noteAudio.play();
             }
         }
-        catch (err) {
-            console.log(err);
-        }
+        catch (err) {}
     }
 
     pauseNote = (note) => {
