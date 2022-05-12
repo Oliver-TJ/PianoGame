@@ -5,7 +5,7 @@ import {InputBox, InputButton, WordLink} from "../components/GlobalComponents";
 function SignUp() {
         return (
         <div>
-            <HandleSignUp />
+            <HandleSignUp/>
         </div>
     )
 }
@@ -55,19 +55,6 @@ class HandleSignUp extends React.Component {
                 "Please re enter your email and password"
             )
         }
-
-
-        function checkNumber(num) {
-            const actual = parseInt(num);
-            if (actual.length === 0){
-                return true;
-            }
-            if (isNaN(num)) {
-                return false;
-            }
-            return actual.length === 13;
-        }
-
     }
 
 

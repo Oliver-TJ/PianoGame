@@ -1,9 +1,9 @@
 import React from 'react';
 import { Piano } from "../components/Piano";
 import './PianoGame.css';
-import { CButton, Note } from "../components/GlobalComponents";
+import { CButton } from "../components/GlobalComponents";
 import styled from "styled-components";
-import {NOTE_TO_XVAL, NOTES, ODE_TO_JOY} from "../components/constants";
+import {NOTE_TO_XVAL, ODE_TO_JOY} from "../components/constants";
 import _ from "lodash";
 
 
@@ -20,7 +20,6 @@ function PianoGame() {
 
 
 class NoteAnimations extends React.Component {
-
     render () {
         const playNotes = _.map(ODE_TO_JOY, (index) => {
             const Noted = styled.div`
@@ -31,7 +30,7 @@ class NoteAnimations extends React.Component {
                 background-color: orange;
                 z-index: 1;
                 border: 2px solid black;
-              opacity: 0;
+                opacity: 0;
                 &:active {
                   opacity: 100%;
                   transition: 2s top;
@@ -70,7 +69,7 @@ class PianosGame extends React.Component {
                         <CButton className="btn-close" onClick={this.handleClick}>Play</CButton>
                         <div>
                             <p>PIANO GAME</p>
-                            <p1>Hit the notes falling from the top of the screen using your keyboard!</p1>
+                            <p>Hit the notes falling from the top of the screen using your keyboard!</p>
                         </div>
 
                     </div>
@@ -81,8 +80,7 @@ class PianosGame extends React.Component {
         if (this.state.isPressed === 'true') {
             return (
                 <div>
-                    <div className="time-counter" >{this.state.time}</div>
-                    <header className="Piano">
+                    <header  className="Piano">
                         <Piano />
                         <NoteAnimations/>
                     </header>

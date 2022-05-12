@@ -40,12 +40,6 @@
     margin-top: 200px;
 }
 
-.time-counter {
-    position: fixed;
-    margin-left: 120px;
-    margin-top: -500px;
-}
-
 .note {
     position: fixed;
     z-index: 3;

@@ -1,17 +1,18 @@
 import React from "react";
 import "./Home.css";
-import {HomeButton} from "../components/GlobalComponents";
+import { HomeButton } from "../components/GlobalComponents";
 
 function Home() {
-    return (
+    return ( // function rendering Home page
+             // displays three buttons which take you to each area
         <div>
             <h1>Home Page</h1>
             <p>
                 Hello user, welcome to my PianoGame
             </p>
-            <p2>
+            <p>
                 Please click on one of the options below to begin:
-            </p2>
+            </p>
             <div className="home-box">
                 <div>
                     <HomeButton href="./SignIn" className="home-button">
@@ -31,6 +32,7 @@ function Home() {
             </div>
         </div>
     )
+
 }
 
 export default Home;

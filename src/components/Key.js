@@ -25,7 +25,7 @@ class Key extends React.Component {
                     <div className={keyClassName} />
                 </div>
             </div>
-            )
+        )
 
     }
 

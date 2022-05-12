@@ -19,7 +19,9 @@ class Piano extends React.Component {
                 noteAudio.play();
             }
         }
-        catch (err) {}
+        catch (err) {
+            alert("Please reload the webpage as some note files are not loaded")
+        }
     }
 
     pauseNote = (note) => {

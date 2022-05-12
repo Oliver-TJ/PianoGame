@@ -5,13 +5,17 @@ export const NOTES =  ['C3', 'Db3', 'D3', 'Eb3',
 
 // array containing all of the valid keys you can press on the keyboard
  export const VALID_KEYS = ['a', 'w', 's', 'e',
-                    'd', 'f', 't', 'g',
-                    'y', 'h', 'u', 'j', 'k'];
+                            'd', 'f', 't', 'g',
+                            'y', 'h', 'u', 'j', 'k'];
 
+
+// notes from the beginning of 'Ode to Joy'
 export const ODE_TO_JOY = ['C3',  'D3',
                            'E3', 'F3',  'G3',
-                           'A3',  'B3', 'C4']
+                           'A3',  'B3', 'C4'];
 
+
+// sets the position of the falling notes
 export const NOTE_TO_XVAL = {
     C3   : '423px',
     D3   : '478px',
@@ -21,7 +25,7 @@ export const NOTE_TO_XVAL = {
     A3   : '698px',
     B3   : '753px',
     C4   : '808px'
-}
+};
 
 // Dictionary to map the keys to notes
 export const KEY_TO_NOTE = {

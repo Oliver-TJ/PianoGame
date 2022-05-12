@@ -24,10 +24,10 @@ function App() {
                         classname="nav-bar"
                     />
                     <Switch>
-                        <Route path="/" exact component={Home}/>
-                        <Route path="/PianoGame" component={PianoGame}/>
-                        <Route path="/SignIn" component={SignIn}/>
-                        <Route path="/SignUp" component={SignUp}/>
+                        <Route path="/" exact component={ Home }/>
+                        <Route path="/PianoGame" component={ PianoGame }/>
+                        <Route path="/SignIn" component={ SignIn }/>
+                        <Route path="/SignUp" component={ SignUp }/>
                     </Switch>
                 </Router>
             </header>
@@ -40,16 +40,16 @@ const  Navbar = () => {
     return (
         <Nav>
             <NavLogo to="/">
-                <img src={logo} alt={'Logo'} className={"logo"}/>
+                <img src={ logo } alt={'Logo'} className={"logo"}/>
             </NavLogo>
             <NavMenu>
-                <NavLink to="/" activeStyle>
+                <NavLink to="/">
                     Home
                 </NavLink>
-                <NavLink to="/PianoGame" activeStyle>
+                <NavLink to="/PianoGame">
                     Piano
                 </NavLink>
-                <NavLink to="/SignIn" activeStyle>
+                <NavLink to="/SignIn">
                     Sign In
                 </NavLink>
                 <NavBtn>

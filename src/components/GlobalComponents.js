@@ -2,6 +2,11 @@ import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const HomeButton = styled.a`
+  /*
+  Button for the homepage
+  Sets the background as transparent and creates 
+  a border which is shown when hovered over
+  */
   background: transparent;
   border-radius: 3px;
   color: white;
